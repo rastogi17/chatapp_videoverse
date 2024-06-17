@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Videoverse</title>
+  <!-- Link to your Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+  <!-- Link to your app.js file -->
+  <script src="app.js"></script>
+  <!-- CSS for basic styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #auth-container {
+      text-align: center;
+      display: block;
+    }
+    #chat-container {
+      display: none;
+    }
+    .message {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="auth-container">
+    <h2>Chat Videoverse</h2>
+    <h3>Sign Up</h3>
+    <form id="signup-form">
+      <input type="email" id="signup-email" placeholder="Email" required><br>
+      <input type="password" id="signup-password" placeholder="Password" required><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    
+    <h3>Sign In</h3>
+    <form id="signin-form">
+      <input type="email" id="signin-email" placeholder="Email" required><br>
+      <input type="password" id="signin-password" placeholder="Password" required><br>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+  
+  <div id="chat-container">
+    <h2>Chat</h2>
+    <div id="online-users">
+      <h3>Online Users</h3>
+      <!-- Online users will be dynamically added here -->
+    </div>
+    
+    <div id="chat-messages">
+      <!-- Chat messages will be dynamically added here -->
+    </div>
+    
+    <form id="message-form">
+      <input type="text" id="message-input" placeholder="Type your message..." required>
+      <button type="submit">Send</button>
+    </form>
+    
+    <button id="logout-button">Log Out</button>
+  </div>
+
+</body>
+</html>
